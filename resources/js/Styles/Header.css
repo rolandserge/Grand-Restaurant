@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+/* :root {
+    color: #FBD146;
+    color: #CFFDE1;
+    color: #C6E3B3;
+    color: #FeF5E3;
+            #FFFCF7
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container_header .logo {
+    /* border: 1px solid; */
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container_header .logo .logo_grand {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.container_header .logo .logo_restaurant {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.container_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 11vh;
+    /* border: 1px solid; */
+}
+.container_header .header_link {
+    width: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+.container_header .header_link .lien {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 500;
+}
+.container_header .header_auth {
+    width: 19%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container_header .header_auth .search {
+    text-decoration: none;
+    color: black;
+}
+.container_header .header_auth .login {
+    text-decoration: none;
+    color: white;
+    padding: 0.4em 1em;
+    border-radius: 20px;
+    background: #FBD146;
+}
+.container_header .header_auth .register {
+    text-decoration: none;
+    color: black;
+    /* padding: 0.4em 1em;
+    background: white; */
+}

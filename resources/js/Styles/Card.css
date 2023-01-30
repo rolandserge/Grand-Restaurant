@@ -1,0 +1,78 @@
+.cards {
+    display: flex;
+    /* border: 1px solid; */
+    justify-content: space-around;
+    /* width: 100%; */
+}
+.cards .card {
+    width: 90%;
+    height: 45vh;
+    border: 0.5px solid lightgrey;
+    border-radius: 10px;
+    margin-bottom: 1.8em;
+    margin-left: 1em;
+}
+.cards .card.active {
+    background: white;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.cards .card .card_image {
+    height: 40%;
+    width: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.cards .card .card_image img {
+    width: 30%;
+    /* height: 100%; */
+}
+.cards .card .infos_div {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 40%;
+}
+.cards .card .infos_div .description {
+    /* border: 1px solid; */
+    width: 85%;
+}
+.cards .card .infos_div .description p {
+    font-size: 13px;
+    text-align: center;
+}
+.cards .card .infos_div .etoile_image {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    width: 40%;
+    height: 15%;
+}
+.cards .card .infos_div .etoile_image img {
+    width: 10%;
+}
+.cards .card .action_button {
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cards .card .action_button .prix span {
+    font-weight: bold;
+}
+.cards .card .action_button .panier button {
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid#FBD146;
+    cursor: pointer;
+}
+.cards .card .action_button .panier .active {
+    background: #FBD146;
+    border: none;
+}

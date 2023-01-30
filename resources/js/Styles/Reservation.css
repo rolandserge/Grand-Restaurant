@@ -1,0 +1,72 @@
+.center {
+    /* border: 1px solid; */
+    height: 68vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_reservation {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid; */
+    width: 60%;
+}
+.container_reservation .reservation_image {
+    width: 48%;
+    /* border: 1px solid; */
+}
+.container_reservation .reservation_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.container_reservation .formulaire_container {
+    width: 50%;
+    /* border: 1px solid; */
+    height: 57vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.container_reservation .formulaire_container .infos_reserve {
+    /* border: 1px solid orange; */
+    text-align: left;
+    height: 13vh;
+}
+.container_reservation .formulaire_container .infos_reserve h3 {
+    font-size: 1.6em;
+}
+.container_reservation .formulaire_container .infos_reserve p {
+    font-size: 13px;
+}
+.container_reservation .formulaire_container .form form{
+    /* border: 1px solid; */
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+    /* align-items: center; */
+}
+.container_reservation .formulaire_container .form form input, select {
+    height: 6vh;
+    padding-left: 1em;
+    width: 100%;
+    border: 1px solid gray;
+    background: transparent;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 5px;
+}
+.container_reservation .formulaire_container .form form .reserve_button {
+    /* border: 1px solid; */
+    text-align: left;
+}
+.container_reservation .formulaire_container .form form button {
+    border: none;
+    padding: 0.5em 2em;
+    /* width: 50%; */
+    background: orange;
+    border-radius: 20px;
+    cursor: pointer;
+}
