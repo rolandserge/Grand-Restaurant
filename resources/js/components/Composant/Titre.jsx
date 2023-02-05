@@ -7,7 +7,7 @@ const Titre = () => {
     return (
         <div className='container_titre'>
             <div className='titre_div'>
-                <h1>Most Popular Dishes</h1>
+                <h1>Plats les plus populaires</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sequi.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, harum. Lorem, ipsum.
                     Lorem ipsum dolor sit amet consectetur adipisicing.

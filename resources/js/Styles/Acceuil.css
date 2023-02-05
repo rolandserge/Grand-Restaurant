@@ -86,8 +86,17 @@
 }
 .plat_tomate img {
     width: 100%;
+    animation: rotate 15s infinite linear;
     height: 100%;
 }
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(360deg)
+    }
+  }
 .container_acceuil .acceuil_droite .titre_grand {
     height: 100%;
     width: 35%;
@@ -125,7 +134,8 @@
     background: white;
     display: flex;
     align-items: center;
-    border-radius: 20px;
+    cursor: pointer;
+    border-radius: 30px;
     justify-content: space-around;
 }
 .container_acceuil .acceuil_droite .type_plat .plat_liste .plate_liste_image {

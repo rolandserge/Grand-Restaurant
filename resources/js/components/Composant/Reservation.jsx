@@ -11,7 +11,7 @@ const Reservation = () => {
                 </div>
                 <div className="formulaire_container">
                     <div className='infos_reserve'>
-                        <h3>Make A Reservation</h3>
+                        <h3>Faire une Réservation</h3>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, magnam.
                             Lorem ipsum dolor

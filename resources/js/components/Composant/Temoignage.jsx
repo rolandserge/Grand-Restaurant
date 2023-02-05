@@ -10,7 +10,7 @@ const Temoignage = () => {
     return (
         <div className='container_temoignage'>
             <div className='temoignage_resto'>
-                <h2>Grand Restaurant Custumer Feedback</h2>
+                <h2>Commentaires des clients du Grand Restaurant</h2>
             </div>
             <div className='temoignage_div'>
                 <div className='temoignage_card'>

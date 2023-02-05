@@ -13,7 +13,7 @@ const Cuisiniere = () => {
     return (
         <div className='container_cuisiniere'>
             <div className='cuisiniere_titre'>
-                <h2>Meet Our Exclusive & Master Chefs</h2>
+                <h2>Rencontrez Nos Chefs Exclusifs & Maîtres</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid!
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, doloribus.

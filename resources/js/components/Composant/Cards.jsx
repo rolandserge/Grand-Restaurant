@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Frite from "../../Assets/Frite.png"
 import "../../Styles/Card.css"
@@ -12,18 +12,28 @@ import Burger from "../../Assets/burger.png"
 import Crepe from "../../Assets/crepe.png"
 import Etoile from "../../Assets/etoile.png"
 
+import { EffectFade } from 'swiper';
+import 'swiper/css/effect-fade';
+
 const Cards = () => {
     return (
         <>
             {/* <Carousel> */}
-            <div className="cards">
+            {/* <div className="cards"> */}
             <Swiper
                 // install Swiper modules
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                modules={[Navigation, Pagination, Scrollbar,EffectFade, A11y, Autoplay]}
                 // spaceBetween={50}
-                slidesPerView={4}
-                navigation
-                pagination={{ clickable: true }}
+                // loop={true}
+                autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                  }}
+                slidesPerView={3.5}
+                // navigation
+                // pagination={{ clickable: true }}
+                className="cards"
                 // scrollbar={{ draggable: true }}
                 // onSwiper={(swiper) => console.log(swiper)}
                 // onSlideChange={() => console.log('slide change')}
@@ -272,7 +282,7 @@ const Cards = () => {
             {/* </Carousel> */}
             ...
             </Swiper>
-            </div>
+            {/* </div> */}
         </>
     );
 };

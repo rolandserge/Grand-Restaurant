@@ -25,14 +25,14 @@
     flex-direction: column;
     justify-content: space-around;
     /* border: 1px solid; */
-    height: 37vh;
+    height: 40vh;
 }
 .cuisinier_container .cuisinier_infos .infos_titre {
     /* border: 1px solid blue; */
     width: 60%;
 }
 .cuisinier_container .cuisinier_infos .infos_titre h3 {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .cuisinier_container .cuisinier_infos .description {
     /* border: 1px solid; */
@@ -59,10 +59,17 @@
 }
 .cuisinier_container .cuisinier_infos .about_action .about_div .about {
     text-decoration: none;
-    background: #FBD146;
+    background: transparent;
     color: black;
+    border: 1px solid #F3D273;
     padding: 0.5em 1em;
     border-radius: 20px;
+    transition: 2s;
+}
+.cuisinier_container .cuisinier_infos .about_action .about_div .about:hover {
+    opacity: 1;
+    transition: 2s;
+    background: orange;
 }
 .cuisinier_container .cuisinier_infos .about_action .about_image {
     width: 25%;

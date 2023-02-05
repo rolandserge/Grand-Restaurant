@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import User from "../../Assets/user.png"
 import "../../Styles/Acceuil.css"
@@ -7,14 +7,51 @@ import Profil from '../../Assets/profil.jpg'
 import Tomate from "../../Assets/Tomate.png"
 import Frite from "../../Assets/frite.png"
 import Ingredient from "../../Assets/ingredient.png"
+import Crepe from "../../Assets/crepe.png"
+import Poulet from "../../Assets/poulet.png"
+import Burger from "../../Assets/burger.png"
 
 const Acceuil = () => {
-    return (
+
+    const plats = [
+        {
+            id: 1,
+            name: "Fruits",
+            image: Tomate
+        },
+        {
+            id: 2,
+            name: "Legumes",
+            image: Frite
+        },
+        {
+            id: 3,
+            name: "Dessert",
+            image: Crepe
+        },
+        {
+            id: 4,
+            name: "Sortie",
+            image: Poulet
+        },
+        {
+            id: 5,
+            name: "Entrée",
+            image: Burger
+        }
+    ]
+    const [image, setImage] = useState(Tomate)
+
+    function ChangeImage(image) {
+        setImage(image)
+    }
+
+     return (
         <div className='container_acceuil'>
             <div className='acceuil_gauche'>
                 <div className='acceuil_titre'>
                     <h1>
-                        The Finger Licking Delicious Taste
+                        Le Goût Délicieux du Léchage de Doigts
                     </h1>
                 </div>
                 <div className='lorem_titre'>
@@ -46,7 +83,7 @@ const Acceuil = () => {
                 </div>
             </div>
             <div className='plat_tomate'>
-                <img src={Tomate} alt="" />
+                <img src={image} alt="" />
             </div>
             <div className='acceuil_droite'>
                 <div className='titre_grand'>
@@ -54,46 +91,21 @@ const Acceuil = () => {
                 </div>
                 <div className='center_plat'>
                     <div className='type_plat'>
-                        <div className='plat_liste'>
-                            <div className="plate_liste_image">
-                                <img src={Tomate} alt="" />
-                            </div>
-                            <div className='plate_liste_text'>
-                                <p>Fruit</p>
-                            </div>
-                        </div>
-                        <div className='plat_liste'>
-                            <div className="plate_liste_image">
-                                <img src={Frite} alt="" />
-                            </div>
-                            <div className='plate_liste_text'>
-                                <p>Legume</p>
-                            </div>
-                        </div>
-                        <div className='plat_liste'>
-                            <div className="plate_liste_image">
-                                <img src={Tomate} alt="" />
-                            </div>
-                            <div className='plate_liste_text'>
-                                <p>Entrée</p>
-                            </div>
-                        </div>
-                        <div className='plat_liste'>
-                            <div className="plate_liste_image">
-                                <img src={Frite} alt="" />
-                            </div>
-                            <div className='plate_liste_text'>
-                                <p>Sortie</p>
-                            </div>
-                        </div>
-                        <div className='plat_liste'>
-                            <div className="plate_liste_image">
-                                <img src={Tomate} alt="" />
-                            </div>
-                            <div className='plate_liste_text'>
-                                <p>Dessert</p>
-                            </div>
-                        </div>
+                        {
+                            plats.map((plat) => {
+
+                                return (
+                                <div className='plat_liste' onClick={() => ChangeImage(plat.image)}>
+                                    <div className="plate_liste_image">
+                                        <img src={plat.image} alt={plat.name} />
+                                    </div>
+                                    <div className='plate_liste_text'>
+                                        <p>{plat.name}</p>
+                                    </div>
+                                </div>
+                                    )
+                            })
+                        }
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ const Cuisinier = () => {
             </div>
             <div className='cuisinier_infos'>
                 <div className='infos_titre'>
-                    <h3>Welcome To Grand. We Offer A Variety of Cuisines</h3>
+                    <h3>Bienvenue à Grand. Nous Offrons une Variété de Cuisines</h3>
                 </div>
                 <div className='description'>
                     <p>

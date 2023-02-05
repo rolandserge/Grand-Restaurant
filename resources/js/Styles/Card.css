@@ -1,7 +1,14 @@
+/* .swipper {
+    border: 1px solid;
+    height: 100%;
+} */
 .cards {
     display: flex;
     /* border: 1px solid; */
     justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+    margin-left: 4em;
     /* width: 100%; */
 }
 .cards .card {
@@ -9,12 +16,26 @@
     height: 45vh;
     border: 0.5px solid lightgrey;
     border-radius: 10px;
+    z-index: 50;
     margin-bottom: 1.8em;
     margin-left: 1em;
+    margin-top: 2.5em;
+    transition: 1s;
+}
+.cards .card:hover {
+    transform: translateY(-20px);
+    transition: 1s;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 .cards .card.active {
     background: white;
+    transform: translateY(-10px);
+    transition: 1s;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.cards .card.active:hover {
+    transform: translateY(0);
+    transition: 1s;
 }
 .cards .card .card_image {
     height: 40%;
