@@ -9,7 +9,8 @@ import Frite from "../../Assets/frite.png"
 import Ingredient from "../../Assets/ingredient.png"
 import Crepe from "../../Assets/crepe.png"
 import Poulet from "../../Assets/poulet.png"
-import Burger from "../../Assets/burger.png"
+import Poupet from '../../Assets/poupet.png'
+import Condiment from "../../Assets/condiment.png"
 
 const Acceuil = () => {
 
@@ -32,12 +33,12 @@ const Acceuil = () => {
         {
             id: 4,
             name: "Sortie",
-            image: Poulet
+            image: Condiment
         },
         {
             id: 5,
             name: "Entrée",
-            image: Burger
+            image: Poupet
         }
     ]
     const [image, setImage] = useState(Tomate)
@@ -92,10 +93,10 @@ const Acceuil = () => {
                 <div className='center_plat'>
                     <div className='type_plat'>
                         {
-                            plats.map((plat) => {
+                            plats.map((plat, index) => {
 
                                 return (
-                                <div className='plat_liste' onClick={() => ChangeImage(plat.image)}>
+                                <div className='plat_liste' key={index} onClick={() => ChangeImage(plat.image)}>
                                     <div className="plate_liste_image">
                                         <img src={plat.image} alt={plat.name} />
                                     </div>

@@ -1,0 +1,31 @@
+.search_container{
+    width: 74%;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_search {
+    text-align: center;
+    width: 80%;
+}
+.form_search input {
+    width: 80%;
+    height: 6vh;
+    border: 0.3px solid black;
+    padding-left: 1.5em;
+    border-radius: 35px;
+}
+.form_search button {
+    cursor: pointer;
+    width: 5%;
+    height: 6vh;
+    position: relative;
+    right: 2em;
+    top: 0.2em;
+    background: transparent;
+    border: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 50%;
+}

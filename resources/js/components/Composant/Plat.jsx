@@ -145,7 +145,6 @@ const Plat = () => {
             return ""
        }
     }
-    console.log(data)
     return (
         <div className="container_plat">
             <div className="plat_intro">
