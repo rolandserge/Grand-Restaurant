@@ -1,0 +1,337 @@
+.container-acceuil {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+
+    @include responsive(tab-port) {
+        flex-direction: column;
+        gap: 1em;
+    }
+    @include responsive(phone) {
+        gap: 0.2em;
+    }
+
+    .acceuil-gauche {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 3em;
+        height: auto;
+        gap: 0.7em;
+        flex-direction: column;
+
+        @include responsive(tab-land) {
+            margin-left: 2em;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%;
+            margin: 0;
+            padding: 0 1em 1em 1em;
+        }
+
+        @include responsive(phone) {
+            gap: 1em;
+        }
+
+        .acceuil-titre {
+            width: 65%;
+
+            @include responsive(tab-land) {
+                width: 100%;
+            }
+
+            @include responsive(phone) {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+        .lorem_titre {
+            width: 90%;
+            font-size: 14px;
+        }
+        .acceuil_titre h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .food-explore {
+            cursor: pointer;
+            padding: .5em 1.1em;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            width: max-content;
+            background: $orange;
+        }
+        .statistiques {
+            display: flex;
+            align-items: center;
+            margin-top: 1.2em;  
+            gap: 1.5em;
+
+            @include responsive(tab-land) {
+                margin: .8em 0;
+            }
+            @include responsive(phone) {
+                // display: none;
+                margin: 0;
+                // gap: 10em;
+            }
+
+
+            .card-profil {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 20%;
+                @include responsive(tab-port) {
+                    width: 28%;         
+                }
+                @include responsive(phone) {
+                    width: 40%;
+                }
+
+                .profil-image {
+                    width: 52px;
+                    height: 8vh;
+                    gap: 0.5em;
+                    display: flex;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid white;
+                    object-fit: cover;
+                    position: absolute;
+
+                    @include responsive(tab-port) {
+                        width: 80px;       
+                    }
+                    @include responsive(phone) {
+                        height: 7vh;
+                        width: 52px;
+                    }
+                }
+                .profil-image:nth-child(1) {
+                    left: 0;
+                    z-index: 1;
+                }
+            
+                .profil-image:nth-child(2) {
+                    left: 30px; // Adjust this value to control the overlap
+                    z-index: 2;
+                }
+            
+                .profil-image:nth-child(3) {
+                    left: 60px; // Adjust this value to control the overlap
+                    z-index: 3;
+                }
+                .profil-image:nth-child(4) {
+                    left: 90px;
+                    z-index: 4;
+                }
+            }
+        }
+    }
+    .acceuil-droite {
+        width: 32%;
+        background: #69B984;
+        height: 62vh;
+        border-radius: 40px 0 0 40px;
+        display: flex;
+        position: relative;
+
+        
+        @include responsive(tab-land){
+            width: 45%;
+            border-radius: 0;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%;
+            padding: 1em;
+            height: auto;
+            align-items: center;
+        }
+
+        @include responsive(phone) {
+            padding: 0.5em;
+        }
+
+        .plat-tomate {
+            height: 30vh;
+            position: absolute;
+            left: -2rem;
+            top: 6.5rem;
+            z-index: 100;
+            @include flex-center;
+
+            @include responsive(tab-port) {
+                left: auto;
+                top: auto;
+                width: 100%;
+                height: auto;
+            }
+
+            @include responsive(phone) {
+                height: auto;
+            }
+    
+            img {
+                width: 100%;
+                animation: rotate 15s infinite linear;
+                height: 100%;
+
+                @include responsive(tab-port) {
+                    height: 80%;
+                    width: 80%;
+                }
+
+                @include responsive(phone) {
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+        }
+
+        .titre-grand {
+            height: 100%;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            @include responsive(tab-port) {
+                width: 80%;
+                height: auto;
+            }
+            @include responsive(phone) {
+                width: 80%;
+            }
+            h1{
+                transform: rotate(90deg);
+                text-transform: uppercase;
+                font-size: 6em;
+                color: #F3D273;
+
+                @include responsive(phone) {
+                    font-size: 5em;
+                    text-align: center;
+                 }
+            }
+
+            
+        }
+        .center-plat {
+            width: 65%;
+            @include flex-center;
+
+            @include responsive(tab-port) {
+                width: 40%;
+            }
+
+            @include responsive(phone) {
+                width: 20%;
+                justify-content: space-between;
+            }
+
+            .type-plat {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.1em;
+
+                @include responsive(tab-land) {
+                    width: 100%;
+                    align-items: center;
+                }
+                
+                @include responsive(phone) {
+                    width: 100%;
+                    align-items: center;
+                    gap: 0.5rem;
+                    height: auto;
+                }
+    
+                .plat-liste {
+                    width: 60%;
+                    background: white;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    border-radius: 30px;
+                    padding: .5em .6em;
+                    gap: .7em;                    
+                    @include responsive(tab-port) {
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+
+                    @include responsive(phone) {
+                        width: 100%;
+                        height: 8vh;
+                        justify-content: flex-start;
+                        border-radius: 50%;
+                    }
+    
+                    .plat-liste-image {
+                        width: 25%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        
+                        @include responsive(phone) {
+                            width: 100%;
+                            height: 100%;
+                        }
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.1em;
+                        }
+                    }
+                    .plat-liste-text {
+                        width: 45%;
+
+                        @include responsive(tab-port) {
+                            width: 60%;   
+                        }
+                        @include responsive(phone) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ingredient {
+        width: 100%;
+        margin-top: -2rem;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 10%;
+        }
+
+        @include responsive(tab-port) {
+            display: none;
+        }
+    }
+}
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(360deg)
+    }
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+
+/*
+    RESSOURCES 
+
+    0px---600px ( PHONE )
+    600px---900px ( TABLET PORTRAIT )
+    900px---1200px ( TABLET LANDSCAPE )
+    1200px-- 1800px ( NORMAL PC )
+    1800px--- +00 ( BIG DESKTOP )
+
+*/
+// couleur
+$blanc: #FFF;
+$noir: #000;
+$orange: orange;
+$gris: #f6f6f6;
+$bg1: #FEF5E3;
+$bg2: #FFFCF7;
+$gray: gray;
+$orange-clair: #FBD146;
+
+// responsive
+$mobile: 480px;
+$sm: 640px;
+$mobile-max: 768px;
+$tablet: 834px;
+$lg: 960px;
+$xl: 1200px;
+$tablet-max: 1024px;
+$laptop: 1440px;
+
+//mixin
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin x-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin scrollbar {
+  scrollbar-color: $bg1 white;
+  scrollbar-width: thin;
+}
+
+@mixin responsive($breakpoint) {
+    //PHONE
+    @if $breakpoint == phone {
+      @media (max-width: 37.5em) {
+        @content;
+      }
+    }
+    //TABLET PORTRAIT
+    @if $breakpoint == tab-port {
+      @media (max-width: 56.25em) {
+        @content;
+      }
+    }
+    //TABLET LANDSCAPE
+    @if $breakpoint == tab-land {
+      @media (max-width: 75em) {
+        @content;
+      }
+    }
+    //NORMAL
+    @if $breakpoint == normal {
+      @media (max-width: 112.5em) {
+        @content;
+      }
+    }
+    //BIG DESKTOP
+    @if $breakpoint == big-desktop {
+      @media (min-width: 112.5em) {
+        @content;
+      }
+    }
+  }

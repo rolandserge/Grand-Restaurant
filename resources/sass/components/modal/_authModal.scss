@@ -1,0 +1,61 @@
+.m_615af6c9.mantine-Modal-title {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.mantine-Modal-close {
+    outline: none;
+}
+.auth-container {
+    .label {
+        text-transform: capitalize;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+    .description {
+        margin: 0.5em 0;
+        color: gray;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-weight: 600;
+                font-size: .9em;
+                margin-bottom: 0.3em;
+            }
+            input {
+                height: 6vh;
+                outline-color: $orange-clair;
+                padding: 0.5em;
+                border: 2px solid #f1f1f1;
+                border-radius: 5px;
+            }
+        }
+        button {
+            padding: 0.5em 0.3em;
+            border-radius: 5px;
+            background: $orange-clair;
+            color: white;
+            cursor: pointer;
+            border: none;
+            margin-top: 0.5em;
+        }
+    }
+
+    .footer-form {
+        text-align: center;
+        margin: 0.7em 0;
+
+        span {
+            cursor: pointer;
+            color: $orange;
+        }
+    }
+}

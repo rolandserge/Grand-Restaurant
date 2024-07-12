@@ -2,7 +2,26 @@
 @import url('https://fonts.bunny.net/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import "setting";
 
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
+// pages styles
+@import "./pages/home";
+
+// component styles
+@import "./components/heros";
+@import "./components/card";
+@import "./components/temoignage";
+@import "./components/about";
+@import "./components/cuisiniere";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/plat";
+@import "./components/reservation";
+@import "./components/search";
+@import "./components/popularDish";
+@import "./components/contact";
+@import "./components/modal/dishModal";
+@import "./components/modal/basketModal";
+@import "./components/modal/checkoutModal";
+@import "./components/modal/authModal";
+@import "./components/modal/aboutModal";

@@ -1,0 +1,125 @@
+.cuisinier-container {
+    display: flex;
+    justify-content: space-around;
+    height: 63vh;
+    align-items: center;
+
+    @include responsive(tab-port) {
+        flex-direction: column;
+        height: auto;
+        gap: 1em;
+        margin-bottom: 1.5em;
+    }
+
+    .cuisinier-image {
+        width: 30%;
+        height: 48vh;
+        border-radius: 0 35px 0 0;
+        overflow: hidden;
+
+        @include responsive(tab-land) {
+            width: 43%;
+            height: 52vh;
+        }
+
+        @include responsive(tab-port) {
+            order: 1;
+            width: 90%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+    .cuisinier-infos {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+        gap: 0.8em;
+
+        @include responsive(tab-land) {
+            width: 50%;
+        }
+
+        @include responsive(tab-port) {
+            width: 90%;
+        }
+
+        .infos-titre {
+            width: 60%;
+
+            @include responsive(tab-land) {
+                width: 100%;
+            }
+    
+
+            h3 {
+                font-size: 1.8em;
+            }
+        }
+        .description {
+            width: 70%;
+
+            @include responsive(tab-land) {
+                width: 100%;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+        .about-action {
+            display: flex;
+            height: 10vh;
+            width: 70%;
+            align-items: center;
+            justify-content: space-between;
+
+            @include responsive(tab-land) {
+                width: 100%;
+            }
+    
+
+            .about-div {
+                width: max-content;
+                height: 8vh;
+                display: flex;
+                align-items: center;
+
+                button {
+                    text-decoration: none;
+                    background: transparent;
+                    color: black;
+                    border: 1px solid #F3D273;
+                    padding: 0.5em 1em;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: all;
+
+                    &:hover {
+                        opacity: 1;
+                        transition: all;
+                        color: white;
+                        background: orange;
+                    }
+                }
+            }
+            .about-image {
+                width: 25%;
+                height: 10vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

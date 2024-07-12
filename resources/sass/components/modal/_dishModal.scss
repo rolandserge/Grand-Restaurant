@@ -1,0 +1,188 @@
+.m_fd1ab0aa.m_54c44539.mantine-Modal-content.m_1b7284a3.mantine-Paper-root {
+    overflow: hidden;
+    height: auto;
+}
+.container-modal {
+    display: flex;
+    gap: 0.5em;
+
+    @include responsive(phone) {
+        flex-direction: column;
+    }
+
+    .image-plat {
+        width: 52%;
+        height: 50vh;
+        border-radius: 5px;
+
+        @include responsive(phone) {
+            width: 100%;
+            height: 30vh;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .container-detail {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        gap: 0.5em;
+
+        @include responsive(phone) {
+            width: 100%;
+            height: 41vh;
+        }
+
+        .info-plat {
+            padding: 0.5em;
+            position: relative;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 50vh;
+            scrollbar-color: $bg1 white;
+            scrollbar-width: thin;
+    
+            .plat {
+                font-weight: 600;
+                margin-bottom: 0.5em;
+            }
+    
+            .specia-prix {
+                display: flex;
+                justify-content: space-between;
+                margin: 0.5em 0;
+    
+                p {
+                    color: $orange-clair;
+                }
+            }
+    
+            .garniture {
+                p {
+                    font-weight: 600;
+                }
+                span {
+                    color: gray;
+                }
+                .container-card {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 1em;
+                    margin: 0.5em 0;
+    
+                    @include responsive(tab-port) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+    
+                    .card {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5em;
+                        padding: 0.5em;
+                        border-radius: 5px;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+                        cursor: pointer;
+            
+                        input[type="checkbox"].demo {
+                            padding: 2em;
+                            border: 1px solid red;
+                        }
+                        input:checked {
+                            color: red;
+                            background: red;
+                        }
+                        label {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+    
+            .garniture-gratuit {
+                margin: 0.5em 0;
+    
+                .supplement {
+                    font-weight: 600;
+                }
+                .container-card {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 0.7em;
+                    margin: 0.5em 0;
+    
+                    @include responsive(tab-port) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+    
+                    .card {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5em;
+                        align-content: center;
+                        align-items: center;
+                        padding: 0.5em;
+                        cursor: pointer;
+                        position: relative;
+                        border-radius: 5px;
+                        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    
+                        @include responsive(phone) {
+                            // padding: 0;
+                        }
+    
+                        .card-image {
+                            height: 10vh;
+                            @include flex-center;
+    
+                            img {
+                                width: 80%;
+                                height: 80%;
+                                object-fit: contain;
+        
+                                @include responsive(phone) {
+                                    width: 80%;
+                                    height: 80%;
+                                }
+                            }
+                        }
+                        p {
+                            color: grey;
+                        }   
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            height: 100%;
+                            cursor: pointer;
+                            width: 100%;
+                        }
+                    }
+                }
+            }   
+        }    
+    }
+}
+
+.action-button-modal {
+
+    button {
+        width: 100%;
+        border: none;
+        cursor: pointer;
+        background: $orange-clair;
+        border-radius: 5px;
+        color: white;
+        padding: 0.6em 0;
+
+        @include responsive(tab-port) {
+            width: 48%;
+        }
+        @include responsive(phone) {
+            width: 100%;
+        }
+    }
+}

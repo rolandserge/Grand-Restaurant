@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&display=swap');
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em 0 3em;
+    align-items: center;
+    height: 11vh;
+
+    @include responsive(tab-land) {
+        display: none;
+    }
+    .logo {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+
+        .logo-grand {
+            text-transform: uppercase;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .logo-restaurant {
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 4em;
+
+        .header-link {
+            display: flex;
+            gap: 2em;
+    
+            .lien {
+                text-decoration: none;
+                font-size: 1.1rem;
+                color: black;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+
+        .header-auth {
+            display: flex;
+            gap: 1.5em;
+            align-items: center;
+
+            button {
+                border: none;
+                font-size: 0.9em;
+                cursor: pointer;
+            }
+            .login {
+                text-decoration: none;
+                color: white;
+                padding: 0.5em 0.6em;
+                border-radius: 5px;
+                background: $orange-clair;
+            }
+            .register {
+                background: transparent;
+            }
+
+        }
+    }
+}
+
+.mantine-Popover-dropdown {
+    border: 1px solid red;
+    display: flex;
+    gap: .6em;
+
+    .info {
+
+        .data {
+            margin-bottom: 1em;
+            
+            p {
+                font-weight: 600;
+            }
+            span {
+                color: gray;
+                font-size: .9em;
+            }
+        }
+        .action {
+            display: flex;
+            gap: .6em;
+
+            button {
+                display: flex;
+                align-items: center;
+                gap: .5em;
+                background: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: .5em .7em;
+                transition: all;
+                box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+                .icon {
+                    font-size: 1.4em;
+                }
+
+                &:hover {
+                    background: #f1f1f1;
+                    transition: all;
+                }
+            }
+        }
+    }
+}
+
+// Basket icon styles
+.container-basket-icon {
+    border: 1px solid;
+    display: flex;
+    padding: .4em .7em;
+    border-radius: 3px;
+    background: black;
+    z-index: 40;
+    position: relative;
+    @include flex-center;
+
+    @include responsive(tab-land) {
+        padding: .7em;
+    }
+
+    span {
+        position: absolute;
+        @include flex-center;
+        background: $orange-clair;
+        color: white;
+        bottom: 0.2em;
+        right: 0.2em;
+        border-radius: 50%;
+        padding: 0.4em;
+        line-height: 1em; // Ensures the text is vertically centered
+        text-align: center; // Centers the text horizontally
+        font-size: .7em;
+    }
+
+    .basket {
+        cursor: pointer;
+        color: white;
+    }
+}
+// Mobile nav bar
+.mobile-nav {
+    display: none;
+
+    @include responsive(tab-land) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 .5em;
+        align-items: center;
+        height: 10vh;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+
+        .logo-grand {
+            text-transform: uppercase;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .logo-restaurant {
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+    }
+
+    .burger {
+        font-weight: bold;
+    }
+}
+
+// drawer style
+.burger-card {
+    @include flex-center;
+    padding: 0.3em 0.5em;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.m_fd1ab0aa.m_b8a05bbd.mantine-Drawer-content.m_1b7284a3.mantine-Paper-root {
+    // border: 1px solid red;
+    // overflow-y: hidden;
+    height: 100%;
+    .logo {
+        @include flex-center;
+        flex-direction: column;
+        margin: .5em 0;
+    
+        .logo-grand {
+            text-transform: uppercase;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .logo-restaurant {
+            font-size: 11px;
+             text-transform: uppercase;
+        }
+    }
+    .nav-card {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        height: 100%;
+        gap: 2em;
+        justify-content: space-between;
+        
+        .items {
+            display: flex;
+            flex-direction: column;
+            gap: .6em;
+            cursor: pointer;
+            .card {
+                display: flex;
+                align-items: center;
+                gap: 0.7em;
+                padding: 0.5em;
+                border-radius: 3px;
+                transition: all;
+    
+                &:hover {
+                    background: $orange-clair;
+                    transition: all;
+                    color: white;
+                }
+    
+                .icon {
+                    font-size: 1.8em;
+                }
+            }
+        }
+        .connexion-auth {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            button {
+                display: flex;
+                align-items: center;
+                gap: .5em;
+                padding: .4em .8em;
+                width: max-content;
+                border-radius: 5px;
+                cursor: pointer;
+                border: none;
+
+                .icon {
+                    font-size: 1.8em;
+                }
+            }
+            .login {
+                background: $orange-clair;
+                color: white;
+            }
+        }
+        .auth-section {
+            display: flex;
+            gap: .8em;
+
+            .data {
+                div {
+                    margin-bottom: .8em;
+                    p {
+                        font-weight: 600;
+                    }
+                    span {
+                        font-size: .9em;
+                        color: gray;
+                    }
+                }
+                button {
+                    display: flex;
+                    gap: .5em;
+                    align-items: center;
+                    border: none;
+                    border-radius: 5px;
+                    padding: .2em 0;
+                    background: none;
+                    cursor: pointer;
+
+                    .icon {
+                        color: red;
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// logo styles
+.logo {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+
+    .logo-grand {
+        text-transform: uppercase;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    .logo-restaurant {
+        font-size: 11px;
+         text-transform: uppercase;
+    }
+}

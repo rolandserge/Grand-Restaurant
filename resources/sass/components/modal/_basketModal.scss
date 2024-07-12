@@ -1,0 +1,146 @@
+.m_fd1ab0aa.m_b8a05bbd.mantine-Drawer-content.m_1b7284a3.mantine-Paper-root {
+    @include scrollbar;
+    height: 100%;
+    overflow-y: hidden;
+}
+.container-basket {
+    height: 70vh;
+    @include scrollbar;
+    overflow-y: scroll;
+
+    .basket-card {
+        margin-bottom: 0.2em;
+        width: 100%;
+        padding: 0.3em 0.3em 1em 0.3em;
+        border-bottom: 2px solid #f1f1f1;
+
+        .card-one {
+            display: flex;
+            gap: 0.5em;
+            align-items: center;
+            margin-bottom: 0.6em;
+
+            .plat-image {
+                width: 30%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .plat-info {
+                width: 100%;
+
+                .header {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    gap: 0.5em;
+                    margin-bottom: 0.3em;
+
+                    p {
+                        width: 90%;
+                        font-weight: 600;
+                    }
+
+                    .delete {
+                        width: 10%;
+                        font-size: 1.3em;
+                        cursor: pointer;
+                    }
+                }
+                .specialite {
+                    color: gray;
+                }
+
+                .body {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0.3em;
+                    justify-content: space-between;
+
+                    .quantity {
+                        display: flex;
+                        gap: 0.5em;
+                        align-items: center;
+                        
+                    }
+                }
+            }
+        }
+        .card-two {
+            display: flex;
+            gap: 0.4em;
+            align-items: center;
+            flex-wrap: wrap;
+
+            p {
+                font-weight: 600;
+            }
+
+            span {
+                background: $orange-clair;
+                color: white;
+                padding: 0.1em 0.5em;
+                border-radius: 20px;
+                font-size: 0.8em;
+            }
+        }
+    }
+
+
+    .basket-action {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        right: 0;
+        padding: 1em;
+        background: white;
+    
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.4em 0;
+    
+            p {
+                font-weight: 600;
+            }
+        }
+    
+        button {
+            width: 100%;
+            padding: 0.6em 0.2em;
+            border-radius: 5px;
+            border: none;
+            background: $orange-clair;
+            color: white;
+            margin-top: 1em;
+            cursor: pointer;
+        }
+    }
+}
+
+
+// Panier vide style
+.basket-vide-container {
+    @include flex-center;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1em;
+
+    p {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+    .menu {
+        padding: .5em 1em;
+        color: white;
+        background: $orange-clair;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 1em 0;
+        border: 1px solid;
+    }
+}

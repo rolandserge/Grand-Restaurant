@@ -1,0 +1,89 @@
+.container-modal-about {
+    display: flex;
+    gap: .5em;
+
+    @include responsive(tab-port) {
+        flex-direction: column;
+    }
+
+    .restaurant-card {
+        width: 50%;
+        height: 60vh;
+
+        @include responsive(tab-port) {
+            width: 100%;
+            height: 35vh;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .restaurant-info {
+        width: 50%;
+        height: 60vh;
+        overflow-y: scroll;
+        @include scrollbar;
+        padding: .3em;
+
+        @include responsive(tab-port) {
+            width: 100%;
+            height: 35vh;
+        }
+        .container-atout {
+            margin: 1.5em 0 .5em 0;
+
+            p {
+                font-size: 1.2em;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+            .atout-cards {
+                margin: 0.5em 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 1.5em;
+                column-gap: .5em;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: .5em;
+
+                    .icon {
+                        color: $orange-clair;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+        .reseau-social {
+            margin-top: 1.5em;
+            p {
+                text-decoration: underline;
+                font-weight: 600;
+                font-size: 1.2em;
+            }
+            .social-card {
+                margin:     .5em 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                div {
+                    display: flex;
+                    gap: .5em;
+                    align-items: center;
+
+                    .icon {
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+    }
+}

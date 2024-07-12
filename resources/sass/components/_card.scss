@@ -1,0 +1,78 @@
+.swiper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.8em;
+    height: auto;
+
+    @include responsive(tab-port) {
+        gap: 0;
+    }
+}
+.swiper-wrapper {
+    height: auto;
+}
+
+.plat-card-image {
+    height: 40vh;
+    width: 100%;
+    cursor: pointer;
+
+    @include responsive(tab-port) {
+        height: 30vh;
+    }
+    
+    @include responsive(phone) {
+        height: 30vh;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.plat-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    height: auto;
+    padding: 0.8em;
+
+    h3 {
+        cursor: pointer;
+    }
+
+    .description {
+        width: 100%;
+
+        p {
+            font-size: 13px;
+        }
+    }
+
+    .action-button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        span {
+            font-weight: bold;
+        }
+        .panier {
+            padding: 0.5em 0.6em;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            background: #FBD146;
+            cursor: pointer;
+            transition: all;
+    
+            @include flex-center;
+    
+            &:hover {
+                transform: scale(1.1);
+                transition: all;
+            }
+        }
+    }
+}

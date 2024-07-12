@@ -1,0 +1,27 @@
+header {
+    height: auto;
+    background: $bg1;
+    /* background: #ffffdd; */
+    /* background: #fCF8E8; */
+}
+main {
+    height: 100%;
+    background: $bg2;
+}
+footer {
+    background: $bg2;
+    
+}
+.home-page {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.basket-phone {
+    display: none;
+
+    @include responsive(tab-land) {
+        display: block;
+    }
+}

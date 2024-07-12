@@ -1,0 +1,91 @@
+.center-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+
+    @include responsive(tab-port) {
+        margin-bottom: 1rem;
+    }
+    
+    .container-contact {
+        width: 85%;
+        height: 19vh;
+        border-radius: 5px;
+        background: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        @include responsive(tab-port) {
+            border: 1px solid;
+            width: 95%;
+            height: auto;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 1.5em;
+            gap: 1rem;
+        }
+        .contact {
+            width: 40%;
+            height: 58%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include responsive(tab-port) {
+                width: 100%;
+                height: auto;
+            }
+            .email {
+                font-size: 1.7em;
+                color: white;
+                font-weight: bold;
+            }
+            .infos {
+                color: wheat;
+                opacity: 0.5;
+                font-size: 12px;
+            }
+        }
+        .contact_form{
+            width: 40%;
+
+            @include responsive(tab-port) {
+                width: 100%;
+
+                form {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            input {
+                height: 6.5vh;
+                width: 80%;
+                border-radius: 22px 0 0 22px;
+                padding-left: 1.5em;
+                border: none;
+                outline: none;
+
+                @include responsive(tab-port) {
+                    border-radius: 5px 0 0 5px;
+                }
+           }
+            button {
+                background: #FBD146;
+                height: 7vh;
+                cursor: pointer;
+                width: 20%;
+                border-radius: 0 22px 22px 0;
+                border: none;
+
+                @include responsive(tab-port) {
+                    border-radius: 0 5px 5px 0;
+                    width: max-content;
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
+}

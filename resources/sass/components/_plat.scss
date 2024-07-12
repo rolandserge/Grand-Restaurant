@@ -1,0 +1,133 @@
+// navigation button style 
+.plat-fleche {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    @include responsive(tab-port) {
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        z-index: 30;
+        left: 0;
+        gap: 0;
+    }
+
+    button {
+        cursor: pointer;
+        background: white;
+        border: none;
+        @include flex-center;
+
+        @include responsive(tab-port) {
+            padding: 0.5em;
+            background: black;
+            color: white;
+            border-radius: 5px;
+        }
+    }
+}
+
+.container-plat {
+    height: auto;
+
+    .plat-intro {
+        text-align: center;
+
+        h3 {
+             font-size: 1.8em;
+        }
+    }
+    .plat-liste {
+        display: flex;
+        height: auto;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0.7em 0;
+
+        @include responsive(tab-port) {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1em;
+            margin: 0 1em;
+        }
+        
+        .button-plat {
+            width: 25%;
+            display: flex;
+            gap: 1.1em;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            @include responsive(tab-port) {
+                flex-direction: row;
+                overflow-y: scroll;
+                scrollbar-width: none;
+                justify-content: flex-start;
+                gap: 1em;
+                width: 100%;
+                margin-top: 1em;
+            }
+
+            button {
+                width: 60%;
+                border-radius: 20px;
+                border: 1px solid #FBD146;
+                height: 6vh;
+                background: white;
+                cursor: pointer;
+                font-size: 15px;
+
+                @include responsive(tab-port) {
+                    width: max-content;
+                    padding: 0.5em 1em;
+                    border-radius: 3px;
+                }
+            }
+            button:hover {
+                background: orange;
+                color: white;
+                border: none;
+            }
+            .active {
+                background: #FBD146;
+                color: white;
+            }
+        }
+        .plat-infos {
+            width: 78%;
+            padding: 0.8em;
+
+            @include responsive(tab-port) {
+                width: 100%;
+                padding-top: 0;
+            } 
+
+            @include responsive(phone) {
+                padding: 0.5em 0.2em;
+            }
+
+            .plat-btn-navigation {
+                display: flex;
+                justify-content: flex-end;
+                width: 87%;
+                margin-bottom: 0.5em;
+
+                @include responsive(tab-port) {
+                    width: 100%;
+                }
+            }
+            
+            .plat-card {
+                height: auto;
+                box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+                border-radius: 10px;
+                overflow: hidden;
+
+            }
+        }
+    }
+}

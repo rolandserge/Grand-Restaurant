@@ -1,0 +1,101 @@
+.cards {
+    margin: 0 1.5em;
+    padding: 0.5em;
+
+    @include responsive(tab-port) {
+        margin-bottom: 1em;
+    }
+
+    @include responsive(phone) {
+        margin: 0 0.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .card {
+        height: auto;
+        border: 0.5px solid lightgrey;
+        transition: all;
+        border-radius: 10px;
+        overflow: hidden;
+        // position: relative;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+        &:hover {
+            transform: translateY(-20px);
+            transition: all;
+
+        }
+        &.active {
+            background: white;
+            transform: translateY(-10px);
+            transition: all;
+
+            &:hover {
+                transform: translateY(0);
+                transition: all;
+            }
+        }
+    }
+}
+
+.container-titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+    order: 2;
+
+    @include responsive(tab-port) {
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .titre-div {
+        width: 60%;
+
+        @include responsive(tab-port) {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            font-weight: bold;
+            padding-bottom: 0.2em;
+        }
+        p {
+            font-size: 13px;
+        }
+    }
+    .fleche {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        div {
+            width: 25%;
+            height: 5vh;
+            border-radius: 50%;
+            border: 1px solid #FBD146;
+
+            .clique {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                text-decoration: none;
+            }
+            img {
+                width: 60%;
+            }
+            .fleche_droite {
+                transform: rotate(180deg);
+            }
+        }
+        .active {
+            background: #FBD146;
+        }
+    }
+}
